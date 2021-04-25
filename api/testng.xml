@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Collection test suite" verbose="1">
-    <parameter name="apiKey" value="PMAK-6083eb474ecc1e003b0cb320-c6903d421386f18096e2af3484e61a2957"/>
-    <parameter name="collectionUid" value="15523041-24a93fc5-c6d6-4bee-a6b0-d590c8a39cff" />
-    <parameter name="collectionName" value="Postman API" />
-    <parameter name="postmanId" value="24a93fc5-c6d6-4bee-a6b0-d590c8a39cff" />
+    <parameter name="apiKey" value="putApiKeyHere"/>
+    <parameter name="collectionUid" value="putExistingCollectionUidHere" />
+    <parameter name="collectionName" value="putExistingCollectionNameHere" />
+    <parameter name="postmanId" value="putExistingPostmanIdHere" />
     <test name="collection">
         <classes>
             <class name="testCases.CollectionsTestCases">
