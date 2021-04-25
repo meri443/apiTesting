@@ -24,15 +24,15 @@ public class CollectionsTestCases {
 	public void getAllCollectionsValidKey(String apiKey) {
 		//Execute API
 		Response response = 
-	    given()
+	    	given()
 			.header("x-api-key", apiKey)
-	        .when()
-	        .get(baseUrl);
+			.when()
+			.get(baseUrl);
 		
 		//Verify response 
-		response
+	    	response
 			.then()
-	        .statusCode(200);
+			.statusCode(200);
 		 
 		List list = response.jsonPath().getList("collections");
 		System.out.println(list.size() + " collections are present");		
@@ -52,9 +52,9 @@ public class CollectionsTestCases {
 	public void getAllCollectionsInvalidKey() {
 		//Execute API
 		Response response = 
-	    given()
-	    	.header("x-api-key", "invalidKey")
-	    	.when()
+	        given()
+			.header("x-api-key", "invalidKey")
+			.when()
 			.get(baseUrl);
 		
 		//Verify response 
@@ -70,8 +70,8 @@ public class CollectionsTestCases {
 	public void getAllCollectionsNoKey() {
 		//Execute API
 		Response response = 
-	    given()
-	    	.when()
+		given()
+			.when()
 			.get(baseUrl);
 		
 		//Verify response 
@@ -90,10 +90,10 @@ public class CollectionsTestCases {
 		//Execute API
 		Response response = 
 		given()
-	        .header("x-api-key", apiKey)
+			.header("x-api-key", apiKey)
 			.pathParam("collectionUid", collectionUid)
-	        .when()
-	        .get(baseUrl + "/{collectionUid}");
+			.when()
+			.get(baseUrl + "/{collectionUid}");
 		
 		//Verify response 
 		response
@@ -128,11 +128,11 @@ public class CollectionsTestCases {
 		//Execute API
 		Response response = 
 		given()
-        	.header("x-api-key", apiKey)
-        	.header("Content-Type", "application/json")
-        	.when()
-        	.body(new JSONObject(requestBody))
-            .post(baseUrl);
+			.header("x-api-key", apiKey)
+			.header("Content-Type", "application/json")
+			.when()
+			.body(new JSONObject(requestBody))
+            		.post(baseUrl);
 		
 		//Verify response 
 		response
